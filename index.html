@@ -27,32 +27,47 @@ a {
   text-decoration: none !important;
 }
 
+/* ── TABLET (up to 1024px) — desktop sizes preserved ── */
 @media screen and (max-width:1024px) {
   .wrapper { max-width:420px !important; }
-  .name { font-size:17px !important; }
-  .designation { font-size:13px !important; }
-  .logo { width:110px !important; padding-right:12px !important; }
-  .logo img { width:100px !important; }
-  .details { font-size:12px !important; line-height:19px !important; }
 }
+
+/* ── SMALL TABLET / LARGE PHONE (up to 767px) ── */
 @media screen and (max-width:767px) {
   .wrapper { max-width:100% !important; }
   .content-table { display:block !important; width:100% !important; }
-  .logo { display:block !important; width:100% !important; text-align:center !important; padding:0 0 10px 0 !important; }
-  .logo img { width:110px !important; margin:0 auto !important; }
-  .details { display:block !important; width:100% !important; font-size:12px !important; line-height:19px !important; }
+  .logo {
+    display:block !important; width:100% !important;
+    text-align:center !important; padding:0 0 10px 0 !important;
+  }
+  .logo img { width:120px !important; margin:0 auto !important; }
+  .details { display:block !important; width:100% !important; }
   .contact-table { margin:0 auto !important; }
 }
+
+/* ── MOBILE PHONE (up to 480px) ── */
+/* Font reduced slightly ONLY to prevent email address overflow — not for icons */
 @media screen and (max-width:480px) {
   .wrapper { max-width:100% !important; padding:0 8px !important; }
-  .name { font-size:16px !important; }
-  .designation { font-size:12px !important; }
-  .logo img { width:95px !important; }
-  .details { font-size:11px !important; line-height:17px !important; }
-  /* CRITICAL: lock icon cell width on mobile so it never shrinks */
-  .icon-cell { width:24px !important; min-width:24px !important; max-width:24px !important; padding-right:7px !important; }
-  .icon-cell img { width:16px !important; height:16px !important; min-width:16px !important; min-height:16px !important; }
-  .tagline { font-size:12px !important; padding:8px !important; }
+  .name        { font-size:17px !important; }
+  .designation { font-size:13px !important; }
+  .details { font-size:12px !important; line-height:20px !important; }
+
+  /* ── ICONS: triple-locked, never shrink ── */
+  .icon-cell {
+    width:26px !important;
+    min-width:26px !important;
+    max-width:26px !important;
+    padding-right:8px !important;
+  }
+  .icon-cell img {
+    width:17px !important;
+    height:17px !important;
+    min-width:17px !important;
+    min-height:17px !important;
+  }
+
+  .tagline    { font-size:12px !important; padding:8px !important; }
   .disclaimer { font-size:9px !important; line-height:13px !important; }
 }
 </style>
@@ -100,24 +115,24 @@ a {
               style="display:block;border:0;outline:none;text-decoration:none;">
           </td>
 
-          <!-- DETAILS -->
-          <td class="details" valign="top" style="font-size:13px;line-height:21px;">
+          <!-- DETAILS — desktop font: 14px unchanged -->
+          <td class="details" valign="top" style="font-size:14px;line-height:22px;">
 
             <!-- EMAIL -->
-            <table cellpadding="0" cellspacing="0" class="contact-table" style="margin-bottom:5px;">
+            <table cellpadding="0" cellspacing="0" class="contact-table" style="margin-bottom:6px;">
               <tr>
-                <!-- Icon cell: fixed width so it NEVER squeezes -->
-                <td class="icon-cell" width="26" style="width:26px;min-width:26px;padding-right:8px;vertical-align:middle;">
+                <td class="icon-cell" width="26"
+                  style="width:26px;min-width:26px;max-width:26px;padding-right:8px;vertical-align:middle;">
                   <img src="https://img.icons8.com/material-rounded/48/3E6658/email.png"
                     width="17" height="17"
                     style="display:block;width:17px;height:17px;min-width:17px;min-height:17px;border:0;">
                 </td>
-                <td style="vertical-align:middle;white-space:nowrap;">
+                <td style="vertical-align:middle;">
                   <a href="mailto:smeeksha.mehra@vriddhiadvisors.com"
                     x-apple-data-detectors="false"
                     style="color:#2f2f2f !important;text-decoration:none !important;-webkit-text-fill-color:#2f2f2f;mso-color-alt:#2f2f2f;">
                     <font color="#2f2f2f">
-                      <span style="color:#2f2f2f !important;-webkit-text-fill-color:#2f2f2f;white-space:normal;word-break:break-word;">
+                      <span style="color:#2f2f2f !important;-webkit-text-fill-color:#2f2f2f;word-break:break-word;">
                         smeeksha.mehra@vriddhiadvisors.com
                       </span>
                     </font>
@@ -127,9 +142,10 @@ a {
             </table>
 
             <!-- PHONE -->
-            <table cellpadding="0" cellspacing="0" class="contact-table" style="margin-bottom:5px;">
+            <table cellpadding="0" cellspacing="0" class="contact-table" style="margin-bottom:6px;">
               <tr>
-                <td class="icon-cell" width="26" style="width:26px;min-width:26px;padding-right:8px;vertical-align:middle;">
+                <td class="icon-cell" width="26"
+                  style="width:26px;min-width:26px;max-width:26px;padding-right:8px;vertical-align:middle;">
                   <img src="https://img.icons8.com/material-rounded/48/3E6658/phone.png"
                     width="17" height="17"
                     style="display:block;width:17px;height:17px;min-width:17px;min-height:17px;border:0;">
@@ -151,7 +167,8 @@ a {
             <!-- WEBSITE -->
             <table cellpadding="0" cellspacing="0" class="contact-table">
               <tr>
-                <td class="icon-cell" width="26" style="width:26px;min-width:26px;padding-right:8px;vertical-align:middle;">
+                <td class="icon-cell" width="26"
+                  style="width:26px;min-width:26px;max-width:26px;padding-right:8px;vertical-align:middle;">
                   <img src="https://img.icons8.com/material-rounded/48/3E6658/domain.png"
                     width="17" height="17"
                     style="display:block;width:17px;height:17px;min-width:17px;min-height:17px;border:0;">
@@ -184,7 +201,8 @@ a {
   <!-- TAGLINE -->
   <tr>
     <td style="padding-top:8px;">
-      <div class="tagline" style="background:#3E6658;color:#ffffff;font-size:14px;padding:10px;text-align:center;font-weight:500;">
+      <div class="tagline"
+        style="background:#3E6658;color:#ffffff;font-size:14px;padding:10px;text-align:center;font-weight:500;">
         Unlock your growth with Vriddhi Advisors
       </div>
     </td>
