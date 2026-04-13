@@ -1,168 +1,199 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Vriddhi Advisors Email Signature</title>
 <style>
-body {
-  margin:0;
-  padding:0;
-  font-family:'Segoe UI','Calibri','Helvetica Neue',Arial,sans-serif;
+
+body, table, td, a, span, div {
+  font-family: 'Segoe UI', Calibri, 'Helvetica Neue', Arial, sans-serif !important;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
 }
-a[x-apple-data-detectors] {
-  color: inherit !important;
-  text-decoration: none !important;
-}
-u + #body a {
-  color: inherit !important;
-  text-decoration: none !important;
-}
-#MessageViewBody a {
-  color: inherit !important;
-  text-decoration: none !important;
-}
-a {
+
+/* Force black on all link states — covers Gmail, Apple Mail, Samsung Mail */
+a, a:link, a:visited, a:hover, a:active, a:focus {
   color: #2f2f2f !important;
   text-decoration: none !important;
 }
 
-/* ── TABLET (up to 1024px) — desktop sizes preserved ── */
-@media screen and (max-width:1024px) {
-  .wrapper { max-width:420px !important; }
+/* Apple auto-detection override (phone numbers, emails on iOS) */
+a[x-apple-data-detectors],
+a[x-apple-data-detectors]:link,
+a[x-apple-data-detectors]:visited {
+  color: inherit !important;
+  text-decoration: none !important;
+  font-size: inherit !important;
+  font-family: inherit !important;
+  font-weight: inherit !important;
+  line-height: inherit !important;
 }
 
-/* ── SMALL TABLET / LARGE PHONE (up to 767px) ── */
-@media screen and (max-width:767px) {
-  .wrapper { max-width:100% !important; }
-  .content-table { display:block !important; width:100% !important; }
-  .logo {
-    display:block !important; width:100% !important;
-    text-align:center !important; padding:0 0 10px 0 !important;
+/* Gmail Android — u + #body trick */
+u + #body a { color: #2f2f2f !important; text-decoration: none !important; }
+
+/* Samsung / older Android */
+#MessageViewBody a { color: #2f2f2f !important; text-decoration: none !important; }
+
+/* ── MOBILE (≤600px) — left-aligned, no compression ── */
+@media screen and (max-width: 600px) {
+
+  .sig-table  { width: 100% !important; max-width: 100% !important; }
+
+  /* Stack logo above contacts, both LEFT-aligned */
+  .logo-td {
+    display: block !important;
+    width: 100% !important;
+    padding-right: 0 !important;
+    padding-bottom: 12px !important;
+    text-align: left !important;
   }
-  .logo img { width:120px !important; margin:0 auto !important; }
-  .details { display:block !important; width:100% !important; }
-  .contact-table { margin:0 auto !important; }
+  .logo-td img {
+    width: 110px !important;
+    height: auto !important;
+    max-width: 110px !important;
+    margin-left: 0 !important;
+  }
+
+  .details-td {
+    display: block !important;
+    width: 100% !important;
+  }
+
+  .name-div   { font-size: 16px !important; }
+  .desig-div  { font-size: 13px !important; }
+
+  .icon-td    { width: 24px !important; min-width: 24px !important; padding-right: 6px !important; }
+  .icon-td img { width: 15px !important; height: 15px !important; min-width: 15px !important; min-height: 15px !important; }
+
+  .ctext      { font-size: 12px !important; line-height: 18px !important; }
+  .tagline    { font-size: 12px !important; padding: 8px 10px !important; }
+  .disclaimer { font-size: 9px  !important; line-height: 13px !important; }
 }
 
-/* ── MOBILE PHONE (up to 480px) ── */
-@media screen and (max-width:480px) {
-  .wrapper { max-width:100% !important; padding:0 8px !important; }
-  .name        { font-size:17px !important; }
-  .designation { font-size:13px !important; }
-  .details { font-size:12px !important; line-height:20px !important; }
-
-  .icon-cell {
-    width:26px !important;
-    min-width:26px !important;
-    max-width:26px !important;
-    padding-right:8px !important;
-  }
-  .icon-cell img {
-    width:17px !important;
-    height:17px !important;
-    min-width:17px !important;
-    min-height:17px !important;
-  }
-
-  .tagline    { font-size:12px !important; padding:8px !important; }
-  .disclaimer { font-size:9px !important; line-height:13px !important; }
-}
 </style>
-</head>
 <!--[if mso]>
 <style type="text/css">
   a { color: #2f2f2f !important; text-decoration: none !important; }
-  .icon-cell { width:26px !important; }
 </style>
 <![endif]-->
-<body id="body">
-<table cellpadding="0" cellspacing="0" border="0" width="100%"
-  class="wrapper"
-  style="max-width:460px;color:#2f2f2f;">
+</head>
 
-  <!-- NAME -->
+<body id="body" style="margin:0;padding:0;background:#ffffff;">
+<!-- u tag activates u+#body Gmail-Android rule -->
+<u></u>
+
+<table class="sig-table" cellpadding="0" cellspacing="0" border="0"
+  width="460"
+  style="max-width:460px;width:460px;color:#2f2f2f;border-collapse:collapse;">
+
+  <!-- NAME + DESIGNATION -->
   <tr>
     <td style="padding:16px 0 6px 0;">
-      <div class="name" style="font-size:18px;font-weight:600;line-height:1.2;color:#2f2f2f;">
+      <div class="name-div"
+        style="font-size:18px;font-weight:700;line-height:1.25;color:#2f2f2f;">
         CA Smeeksha Mehra
       </div>
-      <div class="designation" style="font-size:14px;color:#5f5f5f;padding-top:4px;">
+      <div class="desig-div"
+        style="font-size:14px;color:#5f5f5f;padding-top:4px;">
         Assistant Manager
       </div>
     </td>
   </tr>
 
   <!-- DIVIDER -->
-  <tr>
-    <td style="border-bottom:2px solid #3E6658;"></td>
-  </tr>
+  <tr><td style="height:2px;background:#3E6658;font-size:2px;line-height:2px;">&nbsp;</td></tr>
 
-  <!-- CONTENT -->
+  <!-- LOGO + CONTACT DETAILS -->
   <tr>
-    <td style="padding:14px 0;">
-      <table cellpadding="0" cellspacing="0" width="100%" class="content-table">
+    <td style="padding:14px 0 12px 0;">
+      <table cellpadding="0" cellspacing="0" border="0" width="100%">
         <tr>
 
-          <!-- LOGO -->
-          <td class="logo" width="140" valign="middle" style="padding-right:16px;">
+          <!-- ── LOGO ── fixed width, never stretches -->
+          <td class="logo-td" width="134" valign="middle"
+            style="width:134px;min-width:134px;padding-right:16px;vertical-align:middle;">
             <img
               src="VRIDDHI LOGO PNG final.png"
               alt="Vriddhi Advisors"
-              width="130"
-              style="display:block;border:0;outline:none;text-decoration:none;">
+              width="118"
+              style="display:block;
+                     width:118px;
+                     height:auto;
+                     max-width:118px;
+                     border:0;outline:none;text-decoration:none;">
           </td>
 
-          <!-- DETAILS — desktop font: 14px unchanged -->
-          <td class="details" valign="top" style="font-size:14px;line-height:22px;">
+          <!-- ── CONTACT DETAILS ── -->
+          <td class="details-td" valign="top" style="vertical-align:top;">
 
             <!-- EMAIL -->
-            <table cellpadding="0" cellspacing="0" class="contact-table" style="margin-bottom:6px;">
+            <table cellpadding="0" cellspacing="0" border="0" style="margin-bottom:6px;">
               <tr>
-                <td class="icon-cell" width="26"
-                  style="width:26px;min-width:26px;max-width:26px;padding-right:8px;vertical-align:middle;">
+                <td class="icon-td" valign="middle"
+                  style="width:26px;min-width:26px;padding-right:8px;vertical-align:middle;">
                   <img src="https://img.icons8.com/material-rounded/48/3E6658/email.png"
                     width="17" height="17"
                     style="display:block;width:17px;height:17px;min-width:17px;min-height:17px;border:0;">
                 </td>
-                <td style="vertical-align:middle;">
-                  <span style="color:#2f2f2f;word-break:break-word;">
-                    smeeksha.mehra@vriddhiadvisors.com
-                  </span>
+                <td valign="middle" style="vertical-align:middle;">
+                  <!--[if mso]><span style="color:#2f2f2f !important;text-decoration:none !important;"><![endif]-->
+                  <a href="mailto:smeeksha.mehra@vriddhiadvisors.com"
+                    style="color:#2f2f2f !important;text-decoration:none !important;">
+                    <span class="ctext"
+                      style="color:#2f2f2f !important;text-decoration:none !important;
+                             font-size:13px;word-break:break-word;">
+                      smeeksha.mehra@vriddhiadvisors.com
+                    </span>
+                  </a>
+                  <!--[if mso]></span><![endif]-->
                 </td>
               </tr>
             </table>
 
             <!-- PHONE -->
-            <table cellpadding="0" cellspacing="0" class="contact-table" style="margin-bottom:6px;">
+            <table cellpadding="0" cellspacing="0" border="0" style="margin-bottom:6px;">
               <tr>
-                <td class="icon-cell" width="26"
-                  style="width:26px;min-width:26px;max-width:26px;padding-right:8px;vertical-align:middle;">
+                <td class="icon-td" valign="middle"
+                  style="width:26px;min-width:26px;padding-right:8px;vertical-align:middle;">
                   <img src="https://img.icons8.com/material-rounded/48/3E6658/phone.png"
                     width="17" height="17"
                     style="display:block;width:17px;height:17px;min-width:17px;min-height:17px;border:0;">
                 </td>
-                <td style="vertical-align:middle;white-space:nowrap;color:#2f2f2f;">
-                  <span style="color:#2f2f2f;">
-                    +91&#8203; 9&#8203;9150&#8203; 3&#8203;4074
-                  </span>
+                <td valign="middle" style="vertical-align:middle;white-space:nowrap;">
+                  <!--[if mso]><span style="color:#2f2f2f !important;text-decoration:none !important;"><![endif]-->
+                  <a href="tel:+919915034074"
+                    style="color:#2f2f2f !important;text-decoration:none !important;">
+                    <span class="ctext"
+                      style="color:#2f2f2f !important;text-decoration:none !important;font-size:13px;">
+                      +91 99150 34074
+                    </span>
+                  </a>
+                  <!--[if mso]></span><![endif]-->
                 </td>
               </tr>
             </table>
 
             <!-- WEBSITE -->
-            <table cellpadding="0" cellspacing="0" class="contact-table">
+            <table cellpadding="0" cellspacing="0" border="0">
               <tr>
-                <td class="icon-cell" width="26"
-                  style="width:26px;min-width:26px;max-width:26px;padding-right:8px;vertical-align:middle;">
+                <td class="icon-td" valign="middle"
+                  style="width:26px;min-width:26px;padding-right:8px;vertical-align:middle;">
                   <img src="https://img.icons8.com/material-rounded/48/3E6658/domain.png"
                     width="17" height="17"
                     style="display:block;width:17px;height:17px;min-width:17px;min-height:17px;border:0;">
                 </td>
-                <td style="vertical-align:middle;white-space:nowrap;">
-                  <span style="color:#2f2f2f;">
-                    vriddhiadvisors.com
-                  </span>
+                <td valign="middle" style="vertical-align:middle;white-space:nowrap;">
+                  <!--[if mso]><span style="color:#2f2f2f !important;text-decoration:none !important;"><![endif]-->
+                  <a href="https://vriddhiadvisors.com"
+                    style="color:#2f2f2f !important;text-decoration:none !important;">
+                    <span class="ctext"
+                      style="color:#2f2f2f !important;text-decoration:none !important;font-size:13px;">
+                      vriddhiadvisors.com
+                    </span>
+                  </a>
+                  <!--[if mso]></span><![endif]-->
                 </td>
               </tr>
             </table>
@@ -174,15 +205,14 @@ a {
   </tr>
 
   <!-- DIVIDER -->
-  <tr>
-    <td style="border-bottom:2px solid #3E6658;"></td>
-  </tr>
+  <tr><td style="height:2px;background:#3E6658;font-size:2px;line-height:2px;">&nbsp;</td></tr>
 
   <!-- TAGLINE -->
   <tr>
     <td style="padding-top:8px;">
       <div class="tagline"
-        style="background:#3E6658;color:#ffffff;font-size:14px;padding:10px;text-align:center;font-weight:500;">
+        style="background:#3E6658;color:#ffffff;font-size:13px;
+               padding:10px 14px;text-align:center;font-weight:500;">
         Unlock your growth with Vriddhi Advisors
       </div>
     </td>
@@ -190,7 +220,8 @@ a {
 
   <!-- DISCLAIMER -->
   <tr>
-    <td class="disclaimer" style="padding-top:14px;font-size:10px;color:#6a6a6a;line-height:15px;">
+    <td class="disclaimer"
+      style="padding-top:12px;font-size:10px;color:#6a6a6a;line-height:15px;">
       <strong>Well-Being Notice:</strong> If you receive this outside working hours, please respond at your convenience.
       <br><br>
       <strong>Confidentiality Disclaimer:</strong> This message is intended only for the recipient. Private/ Confidential Information may be contained in this message. If received in error, please delete it and notify the sender. Any information in this message that does not relate to the official business of the organisation shall be understood as neither given nor endorsed by it. Vriddhi Advisors is not responsible for any alterations made during transmission.
